@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/adam250604/finalspring.git'
+                git 'https://github.com/adam250604/pleasework.git'
             }
         }
 
