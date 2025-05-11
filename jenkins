@@ -1,6 +1,15 @@
 pipeline {
     agent any
-
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[url: 'https://github.com/adam250604/pleasework.git']]
+                ])
+            }
+        }
     tools {
         maven 'M3'
         jdk 'jdk17'
